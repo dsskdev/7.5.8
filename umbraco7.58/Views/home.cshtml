@@ -1,0 +1,7 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = "master.cshtml";
+}
+@Umbraco.Field("heading")
+@Umbraco.Field("mainRTE")
+<img src="@Umbraco.TypedMedia(Model.Content.GetPropertyValue("image")).Url" />
