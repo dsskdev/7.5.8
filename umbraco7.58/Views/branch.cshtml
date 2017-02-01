@@ -3,7 +3,49 @@
 	Layout = "master.cshtml";
 }
 @{Html.RenderPartial("Breadcrumb");}
-@{Html.RenderPartial("Child Pages");}
-@Umbraco.Field("heading")
-@Umbraco.Field("mainRTE")
-<img src="@Umbraco.TypedMedia(Model.Content.GetPropertyValue("image")).Url" />
+<div class="row">
+    <div class="col-md-4">
+        @{  var media = Umbraco.Media(1105);}
+        <img class="img-responsive" src="@media.Url" alt="@media.Name">
+    </div>
+    <div class="col-md-8">
+        @Umbraco.Field("heading")
+        <img src="@Umbraco.TypedMedia(Model.Content.GetPropertyValue("image")).Url" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        @{Html.RenderPartial("Child Pages");}
+    </div>
+    <div class="col-md-8">
+        <div class="row top-buffer">
+            <div class="col-md-6">
+                @{ var child = @Model.Content.Children.First();}  
+                    <a href="@child.Url" class="thumbnail">              
+                    <img class="img-responsive" src="@Umbraco.TypedMedia(child.GetPropertyValue("image")).Url" alt="@child.Name">
+                    <h1>@child.GetPropertyValue("heading")</h1>
+                    @(Umbraco.Truncate(child.GetPropertyValue("mainRTE").ToString(),150, true))
+                    </a>
+            </div>
+            <div class="col-md-6">
+                <a href="@child.Url" class="thumbnail">
+                    <img class="img-responsive" src="@Umbraco.TypedMedia(child.Next(1).GetPropertyValue("image")).Url" alt="@child.Next(1).Name">
+                    <h1>@child.Next(1).GetPropertyValue("heading")</h1>
+                    @(Umbraco.Truncate(child.Next(1).GetPropertyValue("mainRTE").ToString(),150, true))
+                </a>
+             </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <img class="img-responsive" src="@Umbraco.TypedMedia(child.Next(2).GetPropertyValue("image")).Url" alt="@child.Next(2).Name">
+                <h1>@child.Next(2).GetPropertyValue("heading")</h1>
+                @(Umbraco.Truncate(child.Next(2).GetPropertyValue("mainRTE").ToString(),150, true))
+            </div>
+            <div class="col-md-4">
+                <img class="img-responsive" src="@Umbraco.TypedMedia(child.Next(3).GetPropertyValue("image")).Url" alt="@child.Next(3).Name">
+                <h1>@child.Next(3).GetPropertyValue("heading")</h1>
+                @(Umbraco.Truncate(child.Next(3).GetPropertyValue("mainRTE").ToString(),150, true))
+            </div>
+        </div>
+    </div>        
+</div>
