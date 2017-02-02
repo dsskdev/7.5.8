@@ -3,7 +3,28 @@
 	Layout = "master.cshtml";
 }
 @{Html.RenderPartial("Breadcrumb");}
-@{Html.RenderPartial("Siblings");}
-@Umbraco.Field("heading")
-@Umbraco.Field("mainRTE")
-<img src="@Umbraco.TypedMedia(Model.Content.GetPropertyValue("image")).Url" />
+<div class="row">
+    <div class="col-md-4">
+        @{  var media = Umbraco.Media(1105);}
+        <img class="img-responsive" src="@media.Url" alt="@media.Name">
+    </div>
+    <div class="col-md-8">
+        <img class="img-responsive" src="@Umbraco.TypedMedia(Model.Content.GetPropertyValue("image")).Url" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        @{Html.RenderPartial("Siblings");}
+    </div>
+    <div class="col-md-8">
+        <div class="row top-buffer">
+            <h1>@Umbraco.Field("heading")</h1>
+           <div class="col-md-6">
+               @Umbraco.Field("mainRTE")
+               </div>
+            <div class="col-md-6">
+                <img class="img-responsive" src="@Umbraco.TypedMedia(Model.Content.GetPropertyValue("image")).Url" />
+            </div>
+        </div>
+     </div>
+</div>

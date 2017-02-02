@@ -383,6 +383,8 @@
     <Content Include="config\applications.config" />
     <Content Include="config\404handlers.config" />
     <Content Include="scripts\jquery-1.9.1.min.map" />
+    <Content Include="Views\Partials\WidgetBasic.cshtml" />
+    <Content Include="Views\Partials\Siblings.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
