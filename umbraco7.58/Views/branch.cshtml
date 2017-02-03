@@ -27,14 +27,14 @@
                 @{ var child = @Model.Content.Children.First();}  
                     <a href="@child.Url" class="thumbnail">              
                     <img class="img-responsive" src="@Umbraco.TypedMedia(child.GetPropertyValue("image")).Url" alt="@child.Name">
-                    <h1>@child.GetPropertyValue("heading")</h1>
+                    <h2>@child.GetPropertyValue("heading")</h2>
                     @(Umbraco.Truncate(child.GetPropertyValue("mainRTE").ToString(),150, true))
                     </a>
             </div>
             <div class="col-md-6">
                 <a href="@child.Next(1).Url" class="thumbnail">
                     <img class="img-responsive" src="@Umbraco.TypedMedia(child.Next(1).GetPropertyValue("image")).Url" alt="@child.Next(1).Name">
-                    <h1>@child.Next(1).GetPropertyValue("heading")</h1>
+                    <h2>@child.Next(1).GetPropertyValue("heading")</h2>
                     @(Umbraco.Truncate(child.Next(1).GetPropertyValue("mainRTE").ToString(),150, true))
                 </a>
              </div>
@@ -43,14 +43,14 @@
             <div class="col-md-6">
                 <a href="@child.Next(2).Url" class="thumbnail">
                     <img class="img-responsive" src="@Umbraco.TypedMedia(child.Next(2).GetPropertyValue("image")).Url" alt="@child.Next(2).Name">
-                    <h1>@child.Next(2).GetPropertyValue("heading")</h1>
+                    <h2>@child.Next(2).GetPropertyValue("heading")</h2>
                     @(Umbraco.Truncate(child.Next(2).GetPropertyValue("mainRTE").ToString(),150, true))
                 </a>
             </div>
             <div class="col-md-6">
                 <a href="@child.Next(2).Url" class="thumbnail">
                     <img class="img-responsive" src="@Umbraco.TypedMedia(child.Next(3).GetPropertyValue("image")).Url" alt="@child.Next(3).Name">
-                    <h1>@child.Next(3).GetPropertyValue("heading")</h1>
+                    <h2>@child.Next(3).GetPropertyValue("heading")</h2>
                     @(Umbraco.Truncate(child.Next(3).GetPropertyValue("mainRTE").ToString(),150, true))
                 </a>
             </div>

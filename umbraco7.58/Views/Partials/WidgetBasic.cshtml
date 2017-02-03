@@ -8,7 +8,7 @@
         <div class="col-md-6">
             <a href="@item.Url" class="thumbnail">
                 <img class="img-responsive" src="@Umbraco.TypedMedia(item.GetPropertyValue("image")).Url" alt="@item.Name">
-                <h1>@item.GetPropertyValue("heading")</h1>
+                <h2>@item.GetPropertyValue("heading")</h2>
                 @(Umbraco.Truncate(item.GetPropertyValue("mainRTE").ToString(), 150, true))
             </a>
         </div>

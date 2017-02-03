@@ -1,6 +1,4 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
-
-
 @*
     This snippet displays a list of links of the pages immediately under the top-most page in the content tree.
     This is the home page for a standard website.
@@ -20,7 +18,7 @@
             </button>
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse">
-            <ul class="nav navbar-nav">
+            <ul class="nav nav-justified">
                 @foreach (var item in selection)
                 {
                 <li class="@(item.IsAncestorOrSelf(CurrentPage) ? " current" : null)">

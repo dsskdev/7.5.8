@@ -334,8 +334,10 @@
   <ItemGroup>
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\mdb.min.css" />
     <Content Include="css\style.css" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="font\glyphicons-halflings-regular.svg" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -344,15 +346,31 @@
     <Content Include="config\imageprocessor\processing.config" />
     <Content Include="config\imageprocessor\cache.config" />
     <Content Include="App_Plugins\ModelsBuilder\package.manifest" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="font\glyphicons-halflings-regular.woff2" />
+    <Content Include="font\glyphicons-halflings-regular.woff" />
+    <Content Include="font\glyphicons-halflings-regular.ttf" />
+    <Content Include="font\glyphicons-halflings-regular.eot" />
+    <Content Include="font\fontawesome-webfont.eot" />
+    <Content Include="font\fontawesome-webfont.ttf" />
+    <Content Include="font\fontawesome-webfont.woff" />
+    <Content Include="font\fontawesome-webfont.woff2" />
+    <Content Include="font\FontAwesome.otf" />
+    <Content Include="font\Roboto\Roboto-Bold.woff" />
+    <Content Include="font\Roboto\Roboto-Bold.woff2" />
+    <Content Include="font\Roboto\Roboto-Light.woff" />
+    <Content Include="font\Roboto\Roboto-Light.woff2" />
+    <Content Include="font\Roboto\Roboto-Medium.woff" />
+    <Content Include="font\Roboto\Roboto-Medium.woff2" />
+    <Content Include="font\Roboto\Roboto-Regular.woff" />
+    <Content Include="font\Roboto\Roboto-Regular.woff2" />
+    <Content Include="font\Roboto\Roboto-Thin.woff" />
+    <Content Include="font\Roboto\Roboto-Thin.woff2" />
     <None Include="scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\jquery-1.9.1.js" />
     <Content Include="scripts\jquery-1.9.1.min.js" />
+    <Content Include="scripts\mdb.min.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
     <Content Include="Views\Partials\Grid\Editors\Rte.cshtml" />
