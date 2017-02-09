@@ -1,0 +1,17 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@{ 
+    var childPages = Model.Content.Children;
+
+}
+@if (childPages.Any())
+{
+    <ul>
+        @foreach (var item in childPages)
+        {
+        <li>
+            <a href="@item.Url">@item.Name</a>
+        </li>
+        }
+    </ul>    
+}

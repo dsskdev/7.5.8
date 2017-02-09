@@ -371,6 +371,7 @@
     <Content Include="scripts\jquery-1.9.1.js" />
     <Content Include="scripts\jquery-1.9.1.min.js" />
     <Content Include="scripts\mdb.min.js" />
+    <Content Include="scripts\script.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
     <Content Include="Views\Partials\Grid\Editors\Rte.cshtml" />
@@ -401,8 +402,10 @@
     <Content Include="config\applications.config" />
     <Content Include="config\404handlers.config" />
     <Content Include="scripts\jquery-1.9.1.min.map" />
-    <Content Include="Views\Partials\WidgetBasic.cshtml" />
+    <Content Include="Views\Partials\Widget Basic.cshtml" />
     <Content Include="Views\Partials\Siblings.cshtml" />
+    <Content Include="Views\Partials\News Menu.cshtml" />
+    <Content Include="Views\Partials\Widget Home News Articles.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

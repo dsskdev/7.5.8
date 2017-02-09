@@ -1,0 +1,25 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@{ 
+    var root = Model.Content.AncestorOrSelf(1);
+    var news = root.Descendants("news");
+}
+<div class="col-md-12">
+    <h2>
+        <a href="/news/">News / Updates
+            <i class="">chevron_right</i>
+        </a>
+    </h2>
+</div>	
+
+@if (news.Any())
+{
+    foreach (var article in news)
+    {
+        <ul>
+            <li>@article.Name</li>
+        </ul>
+            
+    }
+
+}

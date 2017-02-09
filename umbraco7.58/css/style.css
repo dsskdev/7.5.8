@@ -1,6 +1,25 @@
 nav {
     background-color:#2C3B42 !important;
 }
+
+/* start - search box */
+.nav-justified > li > form {
+}
+nav i {
+    color:#039be5;
+    position:absolute;
+    right:0;
+}
+.search input {
+    border-bottom-color:#039be5;
+    height:14px;
+    margin:0;
+    position:absolute;
+    width:10%;
+    right:0;
+
+}
+/* end - search box */
 .breadcrumb {
     background-color:transparent;
     padding:0;

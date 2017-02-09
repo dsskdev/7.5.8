@@ -1,0 +1,94 @@
+﻿ 2017-02-06 09:42:42,027 [P9184/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.5.8 application starting on ST075893
+ 2017-02-06 09:42:42,118 [P9184/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2017-02-06 09:42:42,173 [P9184/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 54ms)
+ 2017-02-06 09:42:42,213 [P9184/D2/T1] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2017-02-06 09:42:42,214 [P9184/D2/T1] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2017-02-06 09:42:42,219 [P9184/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2017-02-06 09:42:43,690 [P9184/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 1472ms)
+ 2017-02-06 09:42:43,701 [P9184/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2017-02-06 09:42:43,705 [P9184/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 4ms)
+ 2017-02-06 09:42:43,705 [P9184/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2017-02-06 09:42:43,709 [P9184/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 4ms)
+ 2017-02-06 09:42:43,725 [P9184/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2017-02-06 09:42:43,729 [P9184/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 3ms)
+ 2017-02-06 09:42:43,729 [P9184/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2017-02-06 09:42:43,733 [P9184/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 4ms)
+ 2017-02-06 09:42:43,810 [P9184/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2017-02-06 09:42:43,815 [P9184/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 4ms)
+ 2017-02-06 09:42:43,815 [P9184/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2017-02-06 09:42:43,820 [P9184/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 4ms)
+ 2017-02-06 09:42:45,741 [P9184/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2017-02-06 09:42:46,665 [P9184/D2/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2017-02-06 09:42:46,679 [P9184/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2017-02-06 09:42:47,105 [P9184/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2017-02-06 09:42:47,383 [P9184/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 5723ms)
+ 2017-02-06 09:42:47,745 [P9184/D2/T12] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:52481/umbraco (UmbracoModule request)
+ 2017-02-06 09:42:48,147 [P9184/D2/T12] INFO  umbraco.content - Load Xml from file...
+ 2017-02-06 09:42:48,320 [P9184/D2/T12] INFO  umbraco.content - Loaded Xml from file.
+ 2017-02-06 09:42:49,579 [P9184/D2/T12] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2017-02-06 09:42:49,589 [P9184/D2/T12] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 9ms)
+ 2017-02-06 09:42:53,439 [P9184/D2/T12] ERROR Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - Failed to build models.
+System.Web.HttpCompileException (0x80004005): c:\Dibs\umbraco7.58\umbraco7.58\App_Data\Models\all.generated.cs(347): error CS1061: 'Umbraco.Core.Models.IPublishedContent' does not contain a definition for 'GetHeading' and no extension method 'GetHeading' accepting a first argument of type 'Umbraco.Core.Models.IPublishedContent' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory.GetModelsAssembly(Boolean forceRebuild) in C:\Users\Stéphane\Documents\Development\Umbraco\Zbu\Zbu.ModelsBuilder\Umbraco.ModelsBuilder\Umbraco\PureLiveModelFactory.cs:line 300
+   at Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory.EnsureModels() in C:\Users\Stéphane\Documents\Development\Umbraco\Zbu\Zbu.ModelsBuilder\Umbraco.ModelsBuilder\Umbraco\PureLiveModelFactory.cs:line 152
+ 2017-02-06 09:42:53,475 [P9184/D2/T12] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - Running without models.
+ 2017-02-06 09:43:48,387 [P9184/D2/T6] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-02-05 09:43:48
+ 2017-02-06 09:43:48,456 [P9184/D2/T17] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2017-02-06 09:43:48,464 [P9184/D2/T17] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 8ms)
+ 2017-02-06 09:54:41,951 [P9184/D2/T60] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-02-06 09:54:45,455 [P9184/D2/T9] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-02-06 09:54:46,627 [P9184/D2/T53] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-02-06 09:54:47,524 [P9184/D2/T53] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-02-06 10:33:29,776 [P5584/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.5.8 application starting on ST075893
+ 2017-02-06 10:33:29,857 [P5584/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2017-02-06 10:33:29,872 [P5584/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 15ms)
+ 2017-02-06 10:33:30,019 [P5584/D2/T1] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2017-02-06 10:33:30,020 [P5584/D2/T1] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2017-02-06 10:33:30,026 [P5584/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2017-02-06 10:33:30,084 [P5584/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 59ms)
+ 2017-02-06 10:33:30,102 [P5584/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2017-02-06 10:33:30,103 [P5584/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
+ 2017-02-06 10:33:30,103 [P5584/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2017-02-06 10:33:30,104 [P5584/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 1ms)
+ 2017-02-06 10:33:30,138 [P5584/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2017-02-06 10:33:30,139 [P5584/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 1ms)
+ 2017-02-06 10:33:30,140 [P5584/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2017-02-06 10:33:30,143 [P5584/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 3ms)
+ 2017-02-06 10:33:30,188 [P5584/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2017-02-06 10:33:30,189 [P5584/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 0ms)
+ 2017-02-06 10:33:30,189 [P5584/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2017-02-06 10:33:30,190 [P5584/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 0ms)
+ 2017-02-06 10:33:32,222 [P5584/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2017-02-06 10:33:32,793 [P5584/D2/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2017-02-06 10:33:32,806 [P5584/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2017-02-06 10:33:32,998 [P5584/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2017-02-06 10:33:33,289 [P5584/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 3724ms)
+ 2017-02-06 10:33:33,991 [P5584/D2/T8] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:52481/umbraco (UmbracoModule request)
+ 2017-02-06 10:33:34,784 [P5584/D2/T8] INFO  umbraco.content - Load Xml from file...
+ 2017-02-06 10:33:34,862 [P5584/D2/T8] INFO  umbraco.content - Loaded Xml from file.
+ 2017-02-06 10:33:36,396 [P5584/D2/T8] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2017-02-06 10:33:36,397 [P5584/D2/T8] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 0ms)
+ 2017-02-06 10:33:39,665 [P5584/D2/T8] ERROR Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - Failed to build models.
+System.Web.HttpCompileException (0x80004005): c:\Dibs\umbraco7.58\umbraco7.58\App_Data\Models\all.generated.cs(347): error CS1061: 'Umbraco.Core.Models.IPublishedContent' does not contain a definition for 'GetHeading' and no extension method 'GetHeading' accepting a first argument of type 'Umbraco.Core.Models.IPublishedContent' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory.GetModelsAssembly(Boolean forceRebuild) in C:\Users\Stéphane\Documents\Development\Umbraco\Zbu\Zbu.ModelsBuilder\Umbraco.ModelsBuilder\Umbraco\PureLiveModelFactory.cs:line 300
+   at Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory.EnsureModels() in C:\Users\Stéphane\Documents\Development\Umbraco\Zbu\Zbu.ModelsBuilder\Umbraco.ModelsBuilder\Umbraco\PureLiveModelFactory.cs:line 152
+ 2017-02-06 10:33:39,777 [P5584/D2/T8] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - Running without models.
+ 2017-02-06 10:33:48,215 [P5584/D2/T17] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-02-06 10:34:34,962 [P5584/D2/T16] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-02-05 10:34:34
+ 2017-02-06 10:34:35,087 [P5584/D2/T18] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2017-02-06 10:34:35,087 [P5584/D2/T18] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 1ms)
+ 2017-02-06 14:34:34,836 [P5584/D2/T16] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-02-05 14:34:34
