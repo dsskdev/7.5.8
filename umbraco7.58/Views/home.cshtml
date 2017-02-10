@@ -6,23 +6,13 @@
 @Umbraco.Field("mainRTE")
 <img src="@Umbraco.TypedMedia(Model.Content.GetPropertyValue("image")).Url" />
 <div class="row">
-    <div class="col-md-12" style="height:100px;border:solid 1px black">
+    <div class="col-md-12">
         @{Html.RenderPartial("Widget Home News Articles");}
     </div>
-    <div class="col-md-4" style="height:100px;border:solid 1px black">
-
+    <div class="col-md-12">
+        @{Html.RenderPartial("Widget Home Partners");}
     </div>
-    <div class="col-md-4" style="height:100px;border:solid 1px black">
-
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-4" style="height:100px;border:solid 1px black">
-    </div>
-    <div class="col-md-4" style="height:100px;border:solid 1px black">
-
-    </div>
-    <div class="col-md-4" style="height:100px;border:solid 1px black">
-
+    <div class="col-md-12">
+        @{Html.RenderPartial("Widget Home News Articles");}
     </div>
 </div>

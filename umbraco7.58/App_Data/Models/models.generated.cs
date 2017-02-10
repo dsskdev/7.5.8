@@ -19,8 +19,8 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "bbac13b5b925fc13")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "156f33766a847f45")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.21")]
 
 namespace Umbraco.Web.PublishedContentModels
 {
@@ -854,6 +854,274 @@ namespace Umbraco.Web.PublishedContentModels
 #pragma warning restore 0109
 
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<News, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Heading
+		///</summary>
+		[ImplementPropertyType("heading")]
+		public string Heading
+		{
+			get { return Content.GetHeading(this); }
+		}
+
+		///<summary>
+		/// Image
+		///</summary>
+		[ImplementPropertyType("image")]
+		public string Image
+		{
+			get { return Content.GetImage(this); }
+		}
+
+		///<summary>
+		/// Link
+		///</summary>
+		[ImplementPropertyType("link")]
+		public Newtonsoft.Json.Linq.JArray Link
+		{
+			get { return Content.GetLink(this); }
+		}
+
+		///<summary>
+		/// Main RTE
+		///</summary>
+		[ImplementPropertyType("mainRTE")]
+		public IHtmlString MainRte
+		{
+			get { return Content.GetMainRte(this); }
+		}
+
+		///<summary>
+		/// Meta Description
+		///</summary>
+		[ImplementPropertyType("metaDescription")]
+		public string MetaDescription
+		{
+			get { return SEO.GetMetaDescription(this); }
+		}
+
+		///<summary>
+		/// Meta Title
+		///</summary>
+		[ImplementPropertyType("metaTitle")]
+		public string MetaTitle
+		{
+			get { return SEO.GetMetaTitle(this); }
+		}
+
+		///<summary>
+		/// Umbraco Internal Redirect Id
+		///</summary>
+		[ImplementPropertyType("umbracoInternalRedirectId")]
+		public object UmbracoInternalRedirectId
+		{
+			get { return UmbracoSettings.GetUmbracoInternalRedirectId(this); }
+		}
+
+		///<summary>
+		/// umbraco Navi Hide
+		///</summary>
+		[ImplementPropertyType("umbracoNaviHide")]
+		public bool UmbracoNaviHide
+		{
+			get { return UmbracoSettings.GetUmbracoNaviHide(this); }
+		}
+
+		///<summary>
+		/// Umbraco Redirect
+		///</summary>
+		[ImplementPropertyType("umbracoRedirect")]
+		public object UmbracoRedirect
+		{
+			get { return UmbracoSettings.GetUmbracoRedirect(this); }
+		}
+
+		///<summary>
+		/// Umbraco Sitemap Hide
+		///</summary>
+		[ImplementPropertyType("umbracoSitemapHide")]
+		public bool UmbracoSitemapHide
+		{
+			get { return UmbracoSettings.GetUmbracoSitemapHide(this); }
+		}
+
+		///<summary>
+		/// Umbraco Url Alias
+		///</summary>
+		[ImplementPropertyType("umbracoUrlAlias")]
+		public string UmbracoUrlAlias
+		{
+			get { return UmbracoSettings.GetUmbracoUrlAlias(this); }
+		}
+
+		///<summary>
+		/// Umbraco Url Name
+		///</summary>
+		[ImplementPropertyType("umbracoUrlName")]
+		public string UmbracoUrlName
+		{
+			get { return UmbracoSettings.GetUmbracoUrlName(this); }
+		}
+	}
+
+	/// <summary>Branch Partner</summary>
+	[PublishedContentModel("branchPartner")]
+	public partial class BranchPartner : PublishedContentModel, IContent, ISEO, IUmbracoSettings
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "branchPartner";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public BranchPartner(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<BranchPartner, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Heading
+		///</summary>
+		[ImplementPropertyType("heading")]
+		public string Heading
+		{
+			get { return Content.GetHeading(this); }
+		}
+
+		///<summary>
+		/// Image
+		///</summary>
+		[ImplementPropertyType("image")]
+		public string Image
+		{
+			get { return Content.GetImage(this); }
+		}
+
+		///<summary>
+		/// Link
+		///</summary>
+		[ImplementPropertyType("link")]
+		public Newtonsoft.Json.Linq.JArray Link
+		{
+			get { return Content.GetLink(this); }
+		}
+
+		///<summary>
+		/// Main RTE
+		///</summary>
+		[ImplementPropertyType("mainRTE")]
+		public IHtmlString MainRte
+		{
+			get { return Content.GetMainRte(this); }
+		}
+
+		///<summary>
+		/// Meta Description
+		///</summary>
+		[ImplementPropertyType("metaDescription")]
+		public string MetaDescription
+		{
+			get { return SEO.GetMetaDescription(this); }
+		}
+
+		///<summary>
+		/// Meta Title
+		///</summary>
+		[ImplementPropertyType("metaTitle")]
+		public string MetaTitle
+		{
+			get { return SEO.GetMetaTitle(this); }
+		}
+
+		///<summary>
+		/// Umbraco Internal Redirect Id
+		///</summary>
+		[ImplementPropertyType("umbracoInternalRedirectId")]
+		public object UmbracoInternalRedirectId
+		{
+			get { return UmbracoSettings.GetUmbracoInternalRedirectId(this); }
+		}
+
+		///<summary>
+		/// umbraco Navi Hide
+		///</summary>
+		[ImplementPropertyType("umbracoNaviHide")]
+		public bool UmbracoNaviHide
+		{
+			get { return UmbracoSettings.GetUmbracoNaviHide(this); }
+		}
+
+		///<summary>
+		/// Umbraco Redirect
+		///</summary>
+		[ImplementPropertyType("umbracoRedirect")]
+		public object UmbracoRedirect
+		{
+			get { return UmbracoSettings.GetUmbracoRedirect(this); }
+		}
+
+		///<summary>
+		/// Umbraco Sitemap Hide
+		///</summary>
+		[ImplementPropertyType("umbracoSitemapHide")]
+		public bool UmbracoSitemapHide
+		{
+			get { return UmbracoSettings.GetUmbracoSitemapHide(this); }
+		}
+
+		///<summary>
+		/// Umbraco Url Alias
+		///</summary>
+		[ImplementPropertyType("umbracoUrlAlias")]
+		public string UmbracoUrlAlias
+		{
+			get { return UmbracoSettings.GetUmbracoUrlAlias(this); }
+		}
+
+		///<summary>
+		/// Umbraco Url Name
+		///</summary>
+		[ImplementPropertyType("umbracoUrlName")]
+		public string UmbracoUrlName
+		{
+			get { return UmbracoSettings.GetUmbracoUrlName(this); }
+		}
+	}
+
+	/// <summary>Page Partner</summary>
+	[PublishedContentModel("pagePartner")]
+	public partial class PagePartner : PublishedContentModel, IContent, ISEO, IUmbracoSettings
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "pagePartner";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public PagePartner(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<PagePartner, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 		}
