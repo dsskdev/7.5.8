@@ -1,33 +1,32 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{ 
-    var root = Model.Content.Children.Where(x => x.Level == 2);
-    var news = Model.Content.AncestorOrSelf().Descendants("branchNews");
-    
+    var part = Model.Content.Descendants(2).First().Children.Where(x => x.Name == "Partners");
 }
 <div class="col-md-12">
     <h3>
-        <a href="/news/">News / Updates
+        <a href="/partners/">Partners
             <i class="fa fa-angle-right"></i>
         </a>
     </h3>
 </div>	
 
-@if (news.Any())
+@if (part.Any())
 {
-    foreach (var article in news.Take(3))
+    foreach (var article in part)
     {
-
-        if (article.HasValue("image"))
+        foreach (var art in article.Children.Take(3))
         {
+            if (art.HasValue("image"))
+            {
             <div class="col-md-4 col-sm-6">
-                <a href="@article.Url">
-                    <img class="img-responsive" src="@Umbraco.TypedMedia(article.GetPropertyValue("image")).Url" />
-                    <h4>@article.Name</h4>
-                    <p>@(Umbraco.Truncate(article.GetPropertyValue("mainRTE").ToString(), 200, true))</p>
+                <a href="@art.Url">
+                    <img class="img-responsive" src="@Umbraco.TypedMedia(art.GetPropertyValue("image")).Url" />
+                    <h4>@art.Name</h4>
+                    <p>@(Umbraco.Truncate(art.GetPropertyValue("mainRTE").ToString(), 200, true))</p>
                 </a>
             </div>
 
+            }
         }
-
     }
 }
