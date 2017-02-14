@@ -407,6 +407,7 @@
     <Content Include="Views\Partials\News Menu.cshtml" />
     <Content Include="Views\Partials\Widget Home News Articles.cshtml" />
     <Content Include="Views\Partials\Widget Home Partners.cshtml" />
+    <Content Include="Views\Partials\Widget Home Events.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

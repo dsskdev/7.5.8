@@ -1,0 +1,21 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = "master.cshtml";
+}
+@{Html.RenderPartial("Breadcrumb");}
+<div class="row">
+    <div class="col-md-4">
+        @{Html.RenderPartial("Siblings");}
+    </div>
+    <div class="col-md-8">
+        <div class="col-md-12">
+            <h1>@Umbraco.Field("heading")</h1>
+        </div>
+        <div class="col-md-6">
+			@Umbraco.Field("mainRTE")
+        </div>
+        <div class="col-md-6">
+            <img class="img-responsive" src="@Umbraco.TypedMedia(Model.Content.GetPropertyValue("image")).Url" />
+        </div>
+    </div>
+</div>

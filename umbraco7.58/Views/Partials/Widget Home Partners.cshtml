@@ -1,6 +1,6 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{ 
-    var part = Model.Content.Descendants(2).First().Children.Where(x => x.Name == "Partners");
+    var partners = Model.Content.Descendants(2).First().Children.Where(x => x.Name == "Partners");
 }
 <div class="col-md-12">
     <h3>
@@ -10,22 +10,21 @@
     </h3>
 </div>	
 
-@if (part.Any())
+@if (partners.Any())
 {
-    foreach (var article in part)
+    foreach (var items in partners)
     {
-        foreach (var art in article.Children.Take(3))
+        foreach (var item in items.Children)
         {
-            if (art.HasValue("image"))
+            if (item.HasValue("image"))
             {
-            <div class="col-md-4 col-sm-6">
-                <a href="@art.Url">
-                    <img class="img-responsive" src="@Umbraco.TypedMedia(art.GetPropertyValue("image")).Url" />
-                    <h4>@art.Name</h4>
-                    <p>@(Umbraco.Truncate(art.GetPropertyValue("mainRTE").ToString(), 200, true))</p>
+            <div class="col-md-3 col-xs-6">
+                <a href="@item.Url">
+                    <img class="img-responsive" src="@Umbraco.TypedMedia(item.GetPropertyValue("image")).Url" />
+                    <h4 class="hidden-xs">@item.Name</h4>
+                    @*<p>@(Umbraco.Truncate(item.GetPropertyValue("mainRTE").ToString(), 200, true))</p>*@
                 </a>
             </div>
-
             }
         }
     }

@@ -2,7 +2,7 @@
 
 @{ 
     var root = Model.Content.AncestorOrSelf(1);
-    var news = root.Descendants("news");
+    var news = root.Descendants("pageNews").Take(3);
 }
 <div class="col-md-12">
     <h3>
@@ -14,16 +14,16 @@
 
 @if (news.Any())
 {
-    foreach (var article in news.Take(3))
+    foreach (var item in news)
     {
 
-        if (article.HasValue("image"))
+        if (item.HasValue("image"))
         {
             <div class="col-md-4 col-sm-6">
-                <a href="@article.Url">
-                    <img class="img-responsive" src="@Umbraco.TypedMedia(article.GetPropertyValue("image")).Url" />
-                    <h4>@article.Name</h4>
-                    <p>@(Umbraco.Truncate(article.GetPropertyValue("mainRTE").ToString(), 200, true))</p>
+                <a href="@item.Url">
+                    <img class="img-responsive" src="@Umbraco.TypedMedia(item.GetPropertyValue("image")).Url" />
+                    <h4>@item.Name</h4>
+                    <p>@(Umbraco.Truncate(item.GetPropertyValue("mainRTE").ToString(), 200, true))</p>
                 </a>
             </div>
 
