@@ -1,7 +1,9 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
-	var siblings = Model.Content.Siblings();
+    var siblings = Model.Content.Siblings();
 	<ul>
+    @{Html.RenderPartial("Navigation Parent"); }
+        <hr />
 	@foreach (var item in siblings.Where(x => x.Id != Model.Content.Id))
 	{
 		<li>

@@ -1,8 +1,9 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{ 
     var root = Model.Content.AncestorOrSelf(1);
-    var events = root.Descendants("pageEvent").Take(3);
+    var events = root.Descendants("pageEvent").Take(4);
 }
+<section>
 <div class="col-md-12">
     <h3>
         <a href="/events/">Events
@@ -17,7 +18,7 @@
     {
         if (article.HasValue("image"))
         {
-            <div class="col-md-4 col-sm-6">
+            <div class="col-md-3 col-sm-6">
                 <a href="@article.Url">
                     <div class="card hoverable">
                         <div class="card-image">
@@ -25,7 +26,7 @@
                                 <img class="img-responsive" src="@Umbraco.TypedMedia(article.GetPropertyValue("image")).Url" />
                                 <div class="card-content">
                                     <h4>@article.Name</h4>
-                                    <p>@(Umbraco.Truncate(article.GetPropertyValue("mainRTE").ToString(), 200, true))</p>
+                                    <p>@(Umbraco.Truncate(article.GetPropertyValue("mainRTE").ToString(), 50, true))</p>
                                 </div>
                             </div>
                         </div>
@@ -36,3 +37,4 @@
         }
     }
 }
+</section>

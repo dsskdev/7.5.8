@@ -1,0 +1,18 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{ 
+    var level = Model.Content.Level;
+    
+}
+<ul>
+    @for(var i = level; i <= level && i > 0; i--)
+    {
+        var parent = Model.Content.Up(i);
+        if (parent != null)
+        {
+            if (parent.Level != 1)
+            {
+                <li>@parent.Name</li>
+            }
+        }
+    }
+</ul>

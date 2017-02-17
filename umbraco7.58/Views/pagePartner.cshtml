@@ -15,7 +15,9 @@
             @Umbraco.Field("mainRTE")
         </div>
         <div class="col-md-6">
-            <img class="img-responsive" src="@Umbraco.TypedMedia(Model.Content.GetPropertyValue("image")).Url" />
+            @if(Model.Content.HasValue("image")){
+                <img class="img-responsive" src="@Umbraco.TypedMedia(Model.Content.GetPropertyValue("image")).Url" />
+            }
         </div>
     </div>
 </div>

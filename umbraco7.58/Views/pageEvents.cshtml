@@ -2,6 +2,7 @@
 @{
 	Layout = "master.cshtml";
 }
+@{ var eventImage = Model.Content.GetPropertyValue("image");}
 @{Html.RenderPartial("Breadcrumb");}
 <div class="row">
     <div class="col-md-4">
@@ -9,13 +10,13 @@
     </div>
     <div class="col-md-8">
         <div class="col-md-12">
+            @if(Model.Content.HasValue("image")){
+                <img class="img-responsive" src="@Umbraco.TypedMedia(Model.Content.GetPropertyValue("image")).Url" />
+            }
             <h1>@Umbraco.Field("heading")</h1>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-12">
 			@Umbraco.Field("mainRTE")
-        </div>
-        <div class="col-md-6">
-            <img class="img-responsive" src="@Umbraco.TypedMedia(Model.Content.GetPropertyValue("image")).Url" />
         </div>
     </div>
 </div>

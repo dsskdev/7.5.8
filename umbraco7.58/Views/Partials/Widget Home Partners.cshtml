@@ -4,28 +4,39 @@
 }
 <div class="col-md-12">
     <h3>
-        <a href="/partners/">Partners
+        <a href="/about/partners/">Partners
             <i class="fa fa-angle-right"></i>
         </a>
     </h3>
-</div>	
-
+</div>
 @if (partners.Any())
 {
     foreach (var items in partners)
     {
         foreach (var item in items.Children)
         {
-            if (item.HasValue("image"))
-            {
-            <div class="col-md-3 col-xs-6">
-                <a href="@item.Url">
-                    <img class="img-responsive" src="@Umbraco.TypedMedia(item.GetPropertyValue("image")).Url" />
-                    <h4 class="hidden-xs">@item.Name</h4>
-                    @*<p>@(Umbraco.Truncate(item.GetPropertyValue("mainRTE").ToString(), 200, true))</p>*@
-                </a>
-            </div>
-            }
+
+            <section>
+                <div class="col-md-2 col-xs-6">
+                    <a href="@item.Url">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <div class="view overlay hm-white-slight z-depth-1">
+                                    @if (item.HasValue("image"))
+                                    {
+                                        <img class="img-responsive" src="@Umbraco.TypedMedia(item.GetPropertyValue("image")).Url" />
+                                    }
+                                    <div class="card-content">
+                                        <h4 class="hidden-xs">@item.Name</h4>
+                                        @*<p>@(Umbraco.Truncate(item.GetPropertyValue("mainRTE").ToString(), 200, true))</p>*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+             
+            </section>
         }
     }
 }

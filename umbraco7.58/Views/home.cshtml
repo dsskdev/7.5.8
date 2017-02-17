@@ -2,22 +2,33 @@
 @{
 	Layout = "master.cshtml";
 }
-@Umbraco.Field("heading")
-@Umbraco.Field("mainRTE")
-<img src="@Umbraco.TypedMedia(Model.Content.GetPropertyValue("image")).Url" />
+<section>
+    <div class="row">
+        <div class="col-md-4">
+            @{  var media = Umbraco.Media(1105);}
+            <a href="/">
+                <img class="img-responsive" src="@media.Url" alt="@media.Name">
+                <h1>@Umbraco.Field("heading")</h1>
+            </a>
+        </div>
+        <div class="col-md-8">
+            <img class="img-responsive" src="@Umbraco.TypedMedia(Model.Content.GetPropertyValue("image")).Url" />
+            @Umbraco.Field("mainRTE")
+        </div>
+    </div>
+</section>
 <div class="row">
     <div class="col-md-12">
         @{Html.RenderPartial("Widget Home News Articles");}
     </div>
 </div>
-    <div class="row">
-        <div class="col-md-12">
-            @{Html.RenderPartial("Widget Home Events");}
-        </div>
+<div class="row">
+    <div class="col-md-12">
+        @{Html.RenderPartial("Widget Home Events");}
     </div>
-        <div class="row">
-            <div class="col-md-12">
-                @{Html.RenderPartial("Widget Home Partners");}
-            </div>
-        </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        @{Html.RenderPartial("Widget Home Partners");}
     </div>
+</div>

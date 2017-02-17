@@ -408,6 +408,8 @@
     <Content Include="Views\Partials\Widget Home News Articles.cshtml" />
     <Content Include="Views\Partials\Widget Home Partners.cshtml" />
     <Content Include="Views\Partials\Widget Home Events.cshtml" />
+    <Content Include="Views\branch.cshtml" />
+    <Content Include="Views\Partials\Navigation Parent.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

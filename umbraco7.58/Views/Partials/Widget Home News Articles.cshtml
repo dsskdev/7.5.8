@@ -2,8 +2,9 @@
 
 @{ 
     var root = Model.Content.AncestorOrSelf(1);
-    var news = root.Descendants("pageNews").Take(3);
+    var news = root.Descendants("pageNews").Take(4);
 }
+<section>
 <div class="col-md-12">
     <h3>
         <a href="/news/">News / Updates
@@ -16,18 +17,24 @@
 {
     foreach (var item in news)
     {
-
-        if (item.HasValue("image"))
-        {
-            <div class="col-md-4 col-sm-6">
-                <a href="@item.Url">
-                    <img class="img-responsive" src="@Umbraco.TypedMedia(item.GetPropertyValue("image")).Url" />
-                    <h4>@item.Name</h4>
-                    <p>@(Umbraco.Truncate(item.GetPropertyValue("mainRTE").ToString(), 200, true))</p>
-                </a>
-            </div>
-
-        }
-
+        <div class="col-md-3 col-sm-6">
+            <a href="@item.Url">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <div class="view overlay hm-white-slight z-depth-1">
+                            @if (item.HasValue("image"))
+                            {
+                            <img class="img-responsive" src="@Umbraco.TypedMedia(item.GetPropertyValue("image")).Url" />
+                            }
+                            <div class="card-content">
+                                <h4>@item.Name</h4>
+                                <p>@(Umbraco.Truncate(item.GetPropertyValue("mainRTE").ToString(), 50, true))</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
     }
 }
+</section>
