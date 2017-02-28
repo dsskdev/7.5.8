@@ -7,9 +7,12 @@
     <div class="col-md-4">
         @{  var media = Umbraco.Media(1105);}
         <img class="img-responsive" src="@media.Url" alt="@media.Name">
-    </div>
+     </div>
     <div class="col-md-8">
-        <img class="img-responsive" src="@Umbraco.TypedMedia(Model.Content.GetPropertyValue("image")).Url" />
+        @if (Model.Content.HasValue("image"))
+        {
+            <img class="img-responsive" src="@Umbraco.TypedMedia(Model.Content.GetPropertyValue("image")).Url" />
+        }
     </div>
 </div>
 <div class="row">
@@ -23,7 +26,10 @@
                @Umbraco.Field("mainRTE")
                </div>
             <div class="col-md-6">
-                <img class="img-responsive" src="@Umbraco.TypedMedia(Model.Content.GetPropertyValue("image")).Url" />
+                @if(Model.Content.HasValue("image"))
+                {
+                    <img class="img-responsive" src="@Umbraco.TypedMedia(Model.Content.GetPropertyValue("image")).Url" />
+                }
             </div>
         </div>
      </div>

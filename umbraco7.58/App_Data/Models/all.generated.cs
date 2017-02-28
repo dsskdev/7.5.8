@@ -9,7 +9,7 @@ using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
 [assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "90626c4bf22c8e4d")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.11")]
 
 
 // FILE: models.generated.cs

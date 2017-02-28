@@ -130,6 +130,5 @@ C:\Dibs\umbraco7.58\umbraco7.58\bin\Umbraco.ModelsBuilder.pdb
 C:\Dibs\umbraco7.58\umbraco7.58\bin\umbraco.providers.xml
 C:\Dibs\umbraco7.58\umbraco7.58\bin\Umbraco.Web.UI.xml
 C:\Dibs\umbraco7.58\umbraco7.58\bin\UmbracoExamine.xml
-C:\Dibs\umbraco7.58\umbraco7.58\obj\Debug\umbraco7.58.csprojResolveAssemblyReference.cache
 C:\Dibs\umbraco7.58\umbraco7.58\obj\Debug\umbraco7.58.dll
 C:\Dibs\umbraco7.58\umbraco7.58\obj\Debug\umbraco7.58.pdb
